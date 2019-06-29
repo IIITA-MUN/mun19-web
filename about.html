@@ -377,48 +377,48 @@
     <!-- Our Gallery Area Start -->
     <div class="our-gallery-area section-padding-0-85">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row myGallery">
                 <!-- Single Gallery Thumb -->
-                <div class="col-12 col-sm-3">
+                <!-- <div class="col-12 col-sm-3">
                     <div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
                         <img src="img/bg-img/28.jpg" alt="">
                     </div>
                 </div>
 
-                <!-- Single Gallery Thumb -->
+                
                 <div class="col-12 col-sm-3">
                     <div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
                         <img src="img/bg-img/29.jpg" alt="">
                     </div>
                 </div>
 
-                <!-- Single Gallery Thumb -->
+                
                 <div class="col-12 col-sm-6">
                     <div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
                         <img src="img/bg-img/30.jpg" alt="">
                     </div>
                 </div>
 
-                <!-- Single Gallery Thumb -->
+                
                 <div class="col-12 col-sm-6">
                     <div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
                         <img src="img/bg-img/31.jpg" alt="">
                     </div>
                 </div>
 
-                <!-- Single Gallery Thumb -->
+                
                 <div class="col-12 col-sm-3">
                     <div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
                         <img src="img/bg-img/32.jpg" alt="">
                     </div>
                 </div>
 
-                <!-- Single Gallery Thumb -->
+                
                 <div class="col-12 col-sm-3">
                     <div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms">
                         <img src="img/bg-img/33.jpg" alt="">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -644,6 +644,46 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/confer.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+    <!-- Photos From Flickr -->
+    <script>
+        var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=4abeabe5c20143c14cc5fe64471d8885&photoset_id=72157709301093516&user_id=182278007@N07&format=json&nojsoncallback=1",
+        "method": "GET",
+        "headers": {}
+        }
+
+        $.ajax(settings).done(function (data) {
+        console.log(data);
+
+
+            var i = 1;
+        // $("#galleryTitle").append(data.photoset.photo[0].title + " Gallery");
+        $.each( data.photoset.photo, function( i, gp ) {
+            var y;
+            if((i % 6) == 2 || (i % 6) == 3){
+                y = 6;
+            }
+            else{
+                y = 3;
+            }
+            i = i+1;
+            var farmId = gp.farm;
+            var serverId = gp.server;
+            var id = gp.id;
+            var secret = gp.secret;
+
+            console.log(farmId + ", " + serverId + ", " + id + ", " + secret + ',' + y);
+
+            //  https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
+
+            $(".myGallery").append('<div class="col-12 col-sm-4"><div class="single-gallery-thumb wow fadeInUp" data-wow-delay="300ms"><img src="https://farm' + farmId + '.staticflickr.com/' + serverId + '/' + id + '_' + secret + '.jpg"/></div></div>');
+
+            });
+        });
+
+    </script>
 
 </body>
 
