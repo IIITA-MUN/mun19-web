@@ -15,7 +15,59 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <style>
+
+body {
+   font-family:Constantia;
+   font-size: 17px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.swap{
+  font-family:Constantia;
+  font-size: 15px; 
+}
+.cont{
+    color: white;
+}
+</style>
 
 </head>
 
@@ -208,28 +260,28 @@
                 <!-- Heading -->
                 <div class="col-12">
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="300ms">
-                        <p>Our Speakings</p>
-                        <h4>Who’s speaking</h4>
+                       <!-- <p>Our Speakings</p> -->
+                        <h4>Committees</h4>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <!-- Single Speaker Area -->
-                <div class="col-12 col-md-6 col-lg-4">
+        <!--    <div class="row">
+                 Single Speaker Area
+                <div class="col-12 col-md-6 col-lg-4"> 
                     <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
-                        <div class="speaker-single-thumb">
+                        <!-- Thumb 
+                        <div class="speaker-single-thumb"> 
                             <img src="img/bg-img/4.jpg" alt="">
                         </div>
-                        <!-- Social Info -->
+                        <!-- Social Info 
                         <div class="social-info">
                             <a href="#"><i class="zmdi zmdi-facebook"></i></a>
                             <a href="#"><i class="zmdi zmdi-instagram"></i></a>
                             <a href="#"><i class="zmdi zmdi-twitter"></i></a>
                             <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                        </div>
-                        <!-- Info -->
+                        </div> 
+                        <!-- Info 
                         <div class="speaker-info">
                             <h5>Albert Barnes</h5>
                             <p>Founder</p>
@@ -237,21 +289,21 @@
                     </div>
                 </div>
 
-                <!-- Single Speaker Area -->
+                <!-- Single Speaker Area 
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
+                        <!-- Thumb 
                         <div class="speaker-single-thumb">
                             <img src="img/bg-img/5.jpg" alt="">
                         </div>
-                        <!-- Social Info -->
+                        <!-- Social Info 
                         <div class="social-info">
                             <a href="#"><i class="zmdi zmdi-facebook"></i></a>
                             <a href="#"><i class="zmdi zmdi-instagram"></i></a>
                             <a href="#"><i class="zmdi zmdi-twitter"></i></a>
                             <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
                         </div>
-                        <!-- Info -->
+                        <!-- Info 
                         <div class="speaker-info">
                             <h5>Patricia Stanley</h5>
                             <p>Product Lead</p>
@@ -259,21 +311,21 @@
                     </div>
                 </div>
 
-                <!-- Single Speaker Area -->
+                <!-- Single Speaker Area 
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
+                        <!-- Thumb 
                         <div class="speaker-single-thumb">
                             <img src="img/bg-img/6.jpg" alt="">
                         </div>
-                        <!-- Social Info -->
+                        <!-- Social Info 
                         <div class="social-info">
                             <a href="#"><i class="zmdi zmdi-facebook"></i></a>
                             <a href="#"><i class="zmdi zmdi-instagram"></i></a>
                             <a href="#"><i class="zmdi zmdi-twitter"></i></a>
                             <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
                         </div>
-                        <!-- Info -->
+                        <!-- Info 
                         <div class="speaker-info">
                             <h5>Evelyn Stone</h5>
                             <p>Photographer</p>
@@ -281,21 +333,21 @@
                     </div>
                 </div>
 
-                <!-- Single Speaker Area -->
+                <!-- Single Speaker Area 
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
+                        <!-- Thumb 
                         <div class="speaker-single-thumb">
                             <img src="img/bg-img/7.jpg" alt="">
                         </div>
-                        <!-- Social Info -->
+                        <!-- Social Info 
                         <div class="social-info">
                             <a href="#"><i class="zmdi zmdi-facebook"></i></a>
                             <a href="#"><i class="zmdi zmdi-instagram"></i></a>
                             <a href="#"><i class="zmdi zmdi-twitter"></i></a>
                             <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
                         </div>
-                        <!-- Info -->
+                        <!-- Info 
                         <div class="speaker-info">
                             <h5>Evelyn Stone</h5>
                             <p>Photographer</p>
@@ -303,21 +355,21 @@
                     </div>
                 </div>
 
-                <!-- Single Speaker Area -->
+                <!-- Single Speaker Area
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
+                        <!-- Thumb 
                         <div class="speaker-single-thumb">
                             <img src="img/bg-img/8.jpg" alt="">
                         </div>
-                        <!-- Social Info -->
+                        <!-- Social Info 
                         <div class="social-info">
                             <a href="#"><i class="zmdi zmdi-facebook"></i></a>
                             <a href="#"><i class="zmdi zmdi-instagram"></i></a>
                             <a href="#"><i class="zmdi zmdi-twitter"></i></a>
                             <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
                         </div>
-                        <!-- Info -->
+                        <!-- Info 
                         <div class="speaker-info">
                             <h5>Susan Hopkins</h5>
                             <p>UX Manager</p>
@@ -325,21 +377,21 @@
                     </div>
                 </div>
 
-                <!-- Single Speaker Area -->
+                <!-- Single Speaker Area 
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-speaker-area bg-gradient-overlay-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Thumb -->
+                        <!-- Thumb 
                         <div class="speaker-single-thumb">
                             <img src="img/bg-img/9.jpg" alt="">
                         </div>
-                        <!-- Social Info -->
+                        <!-- Social Info 
                         <div class="social-info">
                             <a href="#"><i class="zmdi zmdi-facebook"></i></a>
                             <a href="#"><i class="zmdi zmdi-instagram"></i></a>
                             <a href="#"><i class="zmdi zmdi-twitter"></i></a>
                             <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
                         </div>
-                        <!-- Info -->
+                        <!-- Info 
                         <div class="speaker-info">
                             <h5>Michael Fowler</h5>
                             <p>Product Design</p>
@@ -352,7 +404,64 @@
                         <a class="btn confer-btn-white" href="#">view all Speaker <i class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            
+<div class="row">
+    <div class="col-md-6" style="background-color:white;"><div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="g20.png" alt="Avatar" style="width:200px;height:200px;">
+      <h2 class="swap">Flip to know about ->></h2>
+    </div>
+    <div class="flip-card-back">
+      <h1>G20</h1> 
+      <p class="cont">The G20 (or Group of Twenty) is an international forum for the governments and central bank governors from Argentina, Australia, Brazil, Canada, China, France, Germany, India, Indonesia, Italy, Japan, Mexico, Russia, Saudi Arabia, South Africa, South Korea, Turkey, the United Kingdom, the United States and the European Union. Founded in 1999, the G20 aims to discuss policy pertaining to the promotion of international financial stability. It seeks to address issues that go beyond the responsibilities of any one organization. The G20 heads of government or heads of state have periodically conferred at summits since their initial meeting in 2008, and the group also hosts separate meetings of finance ministers and foreign ministers due to the expansion of its agenda in recent years.
+     
+      <h3>Agenda</h3>
+      Climate change and it's impact on human rights with emphasis on economic developments to prevent migration</p> 
+    
+    </div>
+   
+  </div>
+</div> </div>
+    <div class="col-md-6" style="background-color:white;">
+      <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="unhrc.png" alt="Avatar" style="width:200px;height:200px;">
+        <h2 class="swap">Flip to know about ->></h2>
+    </div>
+    <div class="flip-card-back">
+      <h1>UNHRC</h1> 
+      <p class="cont">The United Nations Human Rights Council (UNHRC) is a United Nations body whose mission is to promote and protect human rights around the world. The UNHRC has 47 members elected for staggered three-year terms on a regional group basis. The 38th session of the UNHRC began June 18, 2018. It ended on July 7, 2018. The headquarters of UNHRC is in Geneva, Switzerland. The UNHRC investigates allegations of breaches of human rights in UN member states, and addresses important thematic human rights issues such as freedom of association and assembly, freedom of expression, freedom of belief and religion, women's rights, LGBT rights, Criminals, drug lords in Philippines and the rights of racial and ethnic minorities.
+
+     <h3>Agenda</h3>
+       Role of International Actors and bodies in enshrining human rights to protect sovereignty & Rights of LGBTQ+ Community</p> 
+    
+    </div>
+   
+  </div>
+</div> </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </section>
     <!-- Our Speakings Area End -->
