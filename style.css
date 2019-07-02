@@ -1388,7 +1388,8 @@ input:required {
   z-index: 1;
   overflow: hidden;
   margin-bottom: 40px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  cursor: pointer; }
   .single-speaker-area .speaker-single-thumb {
     position: relative;
     z-index: 1;
@@ -1441,7 +1442,8 @@ input:required {
 .breadcrumb-area {
   position: relative;
   z-index: 1;
-  height: 470px; }
+  height: 470px;
+  margin-bottom: 10px; }
   @media only screen and (max-width: 767px) {
     .breadcrumb-area {
       height: 300px; } }
@@ -2447,7 +2449,7 @@ input:required {
     .single-schedule-area.single-page:hover, .single-schedule-area.single-page:focus {
       border-color: #df42b1; }
 
-/* :: 18.0 Tickets Area CSS */
+/* :: 18.0 Tickets Area CSS single-speaker-area*/
 .our-ticket-pricing-table-area {
   position: relative;
   z-index: 1; }
@@ -2746,3 +2748,88 @@ input:required {
         margin-right: 3px; }
 
 /*# sourceMappingURL=style.css.map */
+.fill{
+  object-fit: fill;
+}
+.modal, .modal1, .modal2, .modal3, .modal4, .modal5, .modal6, .modal7, .modal8, .modal9, .modal10, .modal11 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #ececec;
+  margin: 12% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 27%; /* Could be more or less, depending on screen size */
+  height: 68%;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 10px 8px 27px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  /* background-image: -webkit-linear-gradient(120deg, #505add 0%, #df42b1 100%); */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  text-align: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px;
+  display: none;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.modal-img img{
+    border-radius: 50%;
+    overflow: hidden;  
+    margin-top: -30%;
+    box-shadow: 4px 8px 12px 4px rgba(3, 0, 0, 0.4);
+    /* border: 5px solid black; social-info */
+}
+
+.content{
+  font-size: 13px;
+  overflow: auto;
+}
+
+.name{
+  font-size: 28px;
+}
+
+.desig{
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.connect{
+  position: absolute;
+  bottom: 0;
+  background-color: #DF42B1;
+  width: 90%;
+  font-size: 28px;
+  border-radius: 20px 20px 0px 0px;
+  overflow: auto;
+}
+.connect a{
+  color: #ffffff;
+  margin-right: 20px;
+  margin-left: 20px;
+  
+}
